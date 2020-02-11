@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title> 
+		How to remove duplicates from an 
+		array of objects using JavaScript ? 
+	</title> 
+</head> 
+
+<body> 
+	
+	
+	<button onclick="removeDuplicates()"> 
+		Click here 
+	</button> 
+	
+	<script type="text/javascript"> 
+	
+		function removeDuplicates() { 
+	
+			// Create an array of objects 
+			books = [ 
+				{ index: 2, label: "fizz" }, 
+				{ index: 3, label: "buzz" }, 
+				{ index: 4, label: "fizz" }, 
+				{ index: 5,  }, 
+                { index: 6, label: "fizz buzz"},
+                { index: 7, },
+                { index: 8, label: "fizz" },
+                { index: 9, label: "buzz" },
+                { index: 10, label: "fizz" },
+                { index: 11, }
+                    
+                
+			]; 
+			
+			// Display the list of array objects 
+			console.log(books); 
+	
+			// Declare a new array 
+			let newArray = []; 
+			
+			// Declare an empty object 
+			let uniqueObject = {}; 
+			
+			// Loop for the array elements 
+			for (let i in books) { 
+	
+				// Extract the title 
+				objTitle = books[i]['title']; 
+	
+				// Use the title as the index 
+				uniqueObject[objTitle] = books[i]; 
+			} 
+			
+			// Loop to push unique object into array 
+			for (i in uniqueObject) { 
+				newArray.push(uniqueObject[i]); 
+			} 
+			
+			// Display the unique objects 
+			console.log(newArray); 
+		} 
+	</script> 
+</body> 
+
+</html> 

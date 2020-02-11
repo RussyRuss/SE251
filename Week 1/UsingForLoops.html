@@ -1,0 +1,52 @@
+<!Doctype HTML>
+<html>
+<head>
+<title>Week 1 Demo</title>
+<meta charset="UTF-8">
+
+<script>
+
+var myArray = new Array();
+
+    for(var i = 0; i < 100; i++)
+{
+	var number = i+1
+	var myObject = {index: number, label: findfizz(number)};
+	myArray.push(myObject);
+}
+
+
+for(var i = 0; i < myArray.length; i++)
+{
+	for(value in myArray[i]){
+		console.log(myArray[i][value]);
+		}
+		
+	//if(myArray[i].label == "fizz"){
+		//console.log(myArray[i]);} 	
+}
+
+function findfizz(i){
+	if (i%2==0 && i%3==0){return ("fizz buzz");}
+	else if (i%2==0){return ("fizz");}
+	else if (i%3==0){return ("buzz");}
+	else {return undefined;}
+
+}
+function addNumbers(){
+	var num1 = document.getElementById("number1").value;
+	var num2 = document.getElementById("number2").value;
+	num1 = Number(num1)
+	num2 = Number(num2)
+	var answer = (num1 + num2);
+	alert(answer);
+	console.log(num1 + " + " + num2 + " = " + answer);
+}
+
+
+</script>
+
+</head>
+<body>
+</body>
+</html>

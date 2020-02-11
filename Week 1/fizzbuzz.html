@@ -1,0 +1,41 @@
+<!Doctype HTML>
+<html>
+<head>
+<title>Week 1 Demo</title>
+<meta charset="UTF-8">
+
+<script>
+var a ="string";
+var b = 15;
+var c = true;
+var myArray = new Array();
+
+console.log("a:" + typeof a);
+console.log("b:" + typeof b);
+console.log("c:" + typeof c);
+
+
+            
+  for (var i=1; i <= 100; i++){
+    if (i %3 == 0 && i%2 == 0){   
+        myArray.push("fizz buzz");
+    }
+    else if (i % 2 == 0){
+        myArray.push("fizz");
+    }
+    else if (i % 3 == 0){ 
+        myArray.push("buzz");
+    }
+    else{
+        myArray.push(i);
+    }
+}
+    
+    console.log(myArray);
+
+</script>
+
+</head>
+<body>
+</body>
+</html>
